@@ -7,14 +7,14 @@
   background-size: cover;
   background-attachment: fixed;
   background-image: var(--background-image);
-  max-width: 1024px;
-  width: 100%;
+  width: (100%, 1024px);
+  /* width: 100%; */
   gap: 60px;
 }
 
 .header {
   display: grid;
-  grid-template-rows: 43vh min-content 42vh;
+  grid-template-rows: 1fr min-content 1fr;
   gap: 10px;
   justify-items: center;
   min-height: 100vh;
@@ -64,8 +64,8 @@
 
 .main-heading {
   justify-self: start;
-  /* font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem); */
-  font-size: 105px;
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  /* font-size: 105px; */
   font-weight: 700;
   color: var(--main-title-color);
   text-shadow: 4px 4px 0px var(--shadow-color);

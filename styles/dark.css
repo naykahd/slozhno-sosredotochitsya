@@ -1,5 +1,5 @@
 :root.theme-dark {
-  --background-image: url(/images/cover-image-dark.png);
+  --background-image: url(/images/cover-image-dark.png);;
   --main-title-color: #db00ff;
   --accent-color: #ff0070;
   --main-text-color: #f1b2ce;
@@ -20,10 +20,8 @@
   --subtitle-text-color: #000028;
   --title-color: #FF0070;
   --shadow-color: #ff0070;
-  --nav-color: 
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-  background-image: var(--background-image);
 }
