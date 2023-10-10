@@ -9,7 +9,6 @@
   background-image: var(--background-image);
   max-width: 1024px;
   width: 100%;
-  max-width: 100%;
   gap: 60px;
 }
 
@@ -19,20 +18,17 @@
   gap: 10px;
   justify-items: center;
   min-height: 100vh;
-  
 }
-
 
 .header__theme-menu {
   margin-top: 20px;
-
 }
 
 .header__theme-menu-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Создаем три столбца с равной шириной */
-  gap: 10px; /* Расстояние между кнопками */
-  justify-content: center; /* Центрируем кнопки горизонтально */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  justify-content: center;
 }
 
 .header__theme-menu-button {
@@ -41,21 +37,29 @@
   cursor: pointer;
   outline: none;
   text-transform: lowercase;
-  
-  color: var(--accent-color);
+
+  color: var(--title-color);
   text-align: center;
   font-family: var(--font-family);
   font-size: var(--font-size);
   font-style: normal;
   font-weight: 400;
-  line-height: 18px; /* 100% */
+  line-height: 18px;
   padding-inline: 12px;
   padding-block: 3px;
 }
 
 .header__theme-menu-button_active,
 .header__theme-menu-button:active {
-  border: 1px solid var(--accent-color); /* Добавляем границу при нажатии */
+  border: 1px solid var(--title-color);
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--hover-color);
+}
+
+.header__theme-menu-button:focus {
+  border-bottom: 1px solid var(--accent-color);
 }
 
 .main-heading {
@@ -64,19 +68,18 @@
   font-size: 105px;
   font-weight: 700;
   color: var(--main-title-color);
-  text-shadow: 4px 4px 0px var(--accent-color);
+  text-shadow: 4px 4px 0px var(--shadow-color);
   font-family: var(--font-family);
   font-style: normal;
   line-height: 82.5%; /* 129.525px */
   margin: 0;
-
 }
 
 .text-under-heading {
   max-width: 48%;
-  background-color: var(--accent-color); /* Цвет фона для текста под заголовком */
-  justify-self: end; /* Выравнивание заголовка по левому краю */
-  align-self: center; /* Выравнивание текста под заголовком справа */
+  background-color: var(--accent-color);
+  justify-self: end;
+  align-self: center;
   color: var(--subtitle-text-color);
   font-family: var(--font-family);
   font-size: var(--font-size);
@@ -95,17 +98,12 @@
   padding-right: 20px;
 }
 
-.main-content:last-child {
-  
-}
-
 .section:first-of-type {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 10px;
-  align-items: start; 
+  align-items: start;
 }
-
 
 .card {
   grid-column: 2 / 3;
@@ -116,15 +114,13 @@
 }
 
 .title {
-  color: var(--accent-color);
+  color: var(--title-color);
   font-family: var(--font-family);
   font-size: var(--font-size);
   font-style: normal;
   font-weight: 700;
   line-height: 23.4px; /* 130% */
 }
-
-
 
 .subtitle {
   background-color: var(--accent-color);
@@ -150,7 +146,6 @@
 
 .section:nth-child(2) {
   display: grid;
-
   gap: 20px;
 }
 
@@ -160,7 +155,6 @@
 }
 
 .section:nth-child(2) .card__list {
-  
   display: flex;
   flex-direction: row;
   gap: 20px;
@@ -171,19 +165,17 @@
   flex: 1;
 }
 
-
 .section:nth-child(3) {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 2fr;
   gap: 10px;
-  align-items: start; 
+  align-items: start;
 }
 
 .section:nth-child(3) .card:not(:last-child) {
   padding-bottom: 20px;
 }
-  
 
 .card__list-title {
   margin-bottom: 20px;
@@ -194,7 +186,6 @@
   font-style: normal;
   font-weight: 700;
   line-height: 23.4px; /* 130% */
-
 }
 
 .section:nth-child(3) .subtitle {
@@ -207,7 +198,20 @@
   margin-bottom: 20px;
 }
 
+.empty-link {
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: 2px 2px 0px var(--accent-color);
+}
 
+.empty-link:hover {
+  text-decoration: underline;
+}
+
+.empty-link:focus {
+  outline: none;
+  border: 1px solid var(--main-text-color);
+}
 
 .gallery {
   display: grid;
@@ -215,9 +219,9 @@
   grid-row-gap: 15px;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-template-areas:
-          'a a b'
-          'c e b'
-          'c d d';
+    "a a b"
+    "c e b"
+    "c d d";
   grid-auto-flow: row;
 }
 
@@ -229,23 +233,23 @@
 .gallery-item:nth-of-type(1) {
   grid-area: a;
 }
- 
- .gallery-item:nth-of-type(2) {
+
+.gallery-item:nth-of-type(2) {
   grid-area: b;
 }
- 
+
 .gallery-item:nth-of-type(3) {
   grid-area: c;
 }
- 
+
 .gallery-item:nth-of-type(4) {
   grid-area: e;
 }
- 
+
 .gallery-item:last-of-type {
   grid-area: d;
-} 
-  
+}
+
 .gallery-item img {
   max-width: 100%;
   height: 100%;
@@ -255,7 +259,7 @@
 .footer {
   display: grid;
   color: var(--main-title-color);
-  text-shadow: 2px 2px 0px var(--accent-color);
+  text-shadow: 2px 2px 0px var(--shadow-color);
   font-family: var(--font-family);
   font-size: 157px;
   font-style: normal;
@@ -267,12 +271,11 @@
   margin-bottom: -30px;
 }
 
-
 @media screen and (max-width: 786px) and (max-height: 1024px) {
   .header__theme-menu {
-  justify-self: end;
-  align-self: center;
-  padding: 20px;
+    justify-self: end;
+    align-self: center;
+    padding: 20px;
   }
 
   .header__theme-menu-list {
@@ -301,114 +304,107 @@
   }
 
   .section:nth-child(2) .card__list {
-  flex-flow: column;
-}
+    flex-flow: column;
+  }
 
   .section:nth-child(2) .title {
     grid-template-columns: repeat(4, 1fr);
   }
 
-.section:nth-child(3) {
-  gap: 20px;
-}
+  .section:nth-child(3) {
+    gap: 20px;
+  }
 
-.gallery {
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-}
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  }
 
-.footer {
-  font-size: 121px;
+  .footer {
+    font-size: 121px;
+  }
 }
-
-}
-
 
 @media screen and (max-width: 375px) and (max-height: 668px) {
-
   .page {
     max-width: 100%;
     padding: 0;
     gap: 30px;
   }
-  
+
   .header__theme-menu {
     justify-self: end;
     align-self: center;
     margin: 0;
     padding: 0;
-    }
-  
-    .header__theme-menu-list {
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(3, 1fr);
-      
-    }
-  
-    .main-heading {
-      font-size: 4.84rem;
-      /* font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem); */
-      line-height: 110%;
-    
-    }
-  
-    .header {
-      grid-template-rows: 1fr max-content 1fr;
-      padding: 10px;
-      min-block-size: 100vh;
-    }
-  
-    .text-under-heading {
-      max-width: 95vw;
-      margin: 0;
-    }
-
-    .main-content {
-      padding: 10px;
-      gap: 50px;
-    }
-
-    .section:first-of-type {
-      grid-template-columns: 1fr;
-    }
-
-    .card {
-      grid-column: auto; /* Отменяем заданное значение для grid-column */
-    }
-
-    .section:nth-child(2) .title {
-      grid-template-columns: 1fr;
-    }
-
-    .section:nth-child(3) {
-      display: grid;
-      grid-template-columns: 1fr;
-    }
-
-    .section:nth-child(4) .title {
-      margin-bottom: 10px;
-    }
-
-    .gallery {
-      position: relative;
-      display: block;
-      height: 1366px;
-
-      grid-template-areas:
-        'a'
-        'b'
-        'c'
-        'e'
-        'd';
-    }
-
-    .gallery-item {
-      max-height: 100%;
-      padding-bottom: 6px;
-
-    }
-
-    .footer {
-      font-size: 116px;
-    }
-
   }
+
+  .header__theme-menu-list {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .main-heading {
+    font-size: 4.84rem;
+    /* font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem); */
+    line-height: 110%;
+  }
+
+  .header {
+    grid-template-rows: 1fr max-content 1fr;
+    padding: 10px;
+    min-block-size: 100vh;
+  }
+
+  .text-under-heading {
+    max-width: 95vw;
+    margin: 0;
+  }
+
+  .main-content {
+    padding: 10px;
+    gap: 50px;
+  }
+
+  .section:first-of-type {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    grid-column: auto;
+  }
+
+  .section:nth-child(2) .title {
+    grid-template-columns: 1fr;
+  }
+
+  .section:nth-child(3) {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .section:nth-child(4) .title {
+    margin-bottom: 10px;
+  }
+
+  .gallery {
+    position: relative;
+    display: block;
+    height: 1366px;
+
+    grid-template-areas:
+      "a"
+      "b"
+      "c"
+      "e"
+      "d";
+  }
+
+  .gallery-item {
+    max-height: 100%;
+    padding-bottom: 6px;
+  }
+
+  .footer {
+    font-size: 116px;
+  }
+}

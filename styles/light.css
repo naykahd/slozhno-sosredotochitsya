@@ -1,29 +1,35 @@
 :root.theme-light {
   --background-image: url(/images/cover-image-light.png);
-  --main-title-color: #FFC2E6;
-  --accent-color: #FF8DCB;
+  --main-title-color: #ffc2e6;
+  --accent-color: #ff8dcb;
   --main-text-color: #353430;
+  --hover-color: #32312d66;
   --subtitle-text-color: #353430;
+  --title-color: #353430;
 }
 
 /* Остальные стили */
 
 @media (prefers-color-scheme: light) {
-:root {
-  --background-image: url(/images/cover-image-light.png);
-  --main-title-color: #FFC2E6;
-  --accent-color: #FF8DCB;
-  --main-text-color: #353430;
-  --subtitle-text-color: #353430;
+  :root {
+    --background-image: url(/images/cover-image-light.png);
+    --main-title-color: #ffc2e6;
+    --accent-color: #ff8dcb;
+    --main-text-color: #353430;
+    --hover-color: #32312d66;
+    --subtitle-text-color: #353430;
+    --title-color: #353430;
   }
 }
 
 .page.theme_light {
   --background-image: url(/images/cover-image-light.png);
-  --main-title-color: #FFC2E6;
-  --accent-color: #FF8DCB;
+  --main-title-color: #ffc2e6;
+  --accent-color: #ff8dcb;
   --main-text-color: #353430;
   --subtitle-text-color: #353430;
+  --hover-color: #32312d66;
+  --title-color: #353430;
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя

@@ -5,10 +5,13 @@
 
 :root {
   --background-image: url(/images/cover-image-dark.png);
-  --main-title-color: #DB00FF;
-  --accent-color: #FF0070;
-  --main-text-color: #F1B2CE;
+  --main-title-color: #db00ff;
+  --accent-color: #ff0070;
+  --main-text-color: #f1b2ce;
+  --hover-color: #ff007066;
+  --title-color: #ff0070;
+  --shadow-color: #ff0070;
   --subtitle-text-color: #000028;
-  --font-family: 'IBM Plex Mono', monospace;
+  --font-family: "IBM Plex Mono", monospace;
   --font-size: 18px;
 }
